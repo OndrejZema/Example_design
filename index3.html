@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .html,
+        body {
+            margin: 0px;
+        }
+
+        .top {
+            height: 15vh;
+            width: 100%;
+            background-color: blue;
+        }
+
+        .left {
+            height: 70vh;
+            min-width: 15vh;
+            background-color: red;
+        }
+
+        .center {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+            background-color: green;
+
+        }
+
+        .bottom {
+            height: 15vh;
+            width: 100%;
+            background-color: yellow;
+        }
+
+        .row {
+            display: flex;
+            /* align-items: stretch; */
+            justify-content: space-between;
+        }
+        .center>*{
+            flex: 1;
+        }
+
+        .box {
+            margin: 3rem;
+            padding: 3rem;
+            background-color: orange;
+
+        }
+
+        @media only screen and (max-width: 600px) {
+            .row {
+                display: block;
+            }
+
+            .left {
+                height: 10vh;
+            }
+
+            .box {
+                width: 100%;
+                text-align: center;
+            }
+            .center>*{
+                flex: initial;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="top"></div>
+    <div class="row">
+        <div class="left"></div>
+        <div class="center">
+            <div class="box">Text bloku jedna</div>
+            <div class="box ">Text bloku dva</div>
+            <div class="box">Text bloku tri</div>
+        </div>
+    </div>
+    <div class="bottom"></div>
+
+</body>
+
+</html>
